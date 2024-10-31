@@ -9,6 +9,7 @@ package javaapplication3;
  * @author JoseGarces
  */
 public class Main {
+    
     public static void main(String[] args) {
         Auto autoCascajo = new Auto("123LATA", "Renault 12");
         Auto autoFord = new Auto("999POWR", "Ford Focus");
