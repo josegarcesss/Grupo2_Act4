@@ -6,7 +6,7 @@ package javaapplication3;
 
 /**
  *
- * @author xxjos
+ * @author JoseGarces
  */
 public interface Madre {
     double FORTUNA = 50000.0;

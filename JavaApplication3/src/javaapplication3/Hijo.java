@@ -4,24 +4,31 @@
  */
 package javaapplication3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
- * @author xxjos
+ * @author JoseGarces
  */
 class Hijo extends Padre implements Madre, Tio, Hermano {
-    private String nombre;
+     private String nombre;
     private double billetera;
     private Celular celular;
+    private List<Auto> autosConducidos;
 
     public Hijo(String nombre, Celular celular, Auto auto) {
         super(auto);
         this.nombre = nombre;
         this.celular = celular;
-        this.billetera = 0.0;
+        this.billetera = 0;
+        this.autosConducidos = new ArrayList<>();
+        celular.setPropietario(this); 
     }
 
     public void conducirAuto(Auto auto) {
-        System.out.println("Conduciendo un auto de un amigo: " + auto.getModelo());
+        autosConducidos.add(auto);
+        System.out.println("Conduciendo un " + auto.getModelo() + " de un amigo!");
     }
 
     @Override
@@ -43,9 +50,9 @@ class Hijo extends Padre implements Madre, Tio, Hermano {
     }
 
     @Override
-    public void heredarDinero(double money) {
-        billetera += money;
-        System.out.println("Tío Lucas te regala estos dolaritos!");
+    public void heredarDinero(double dinero) {
+        billetera += dinero;
+        System.out.println("Tío Lucas te regala estos dolaritos! : $"+dinero);
     }
 
     @Override
@@ -55,6 +62,6 @@ class Hijo extends Padre implements Madre, Tio, Hermano {
 
     @Override
     public int hacerGoles() {
-        return (int) (Math.random() * 10); // Simulación de goles
+        return (int) (Math.random() * 10);
     }
 }

@@ -6,21 +6,28 @@ package javaapplication3;
 
 /**
  *
- * @author xxjos
+ * @author JoseGarces
  */
-public class Casa {
-     private String zona;
+class Casa {
+   private String zona;
+    private int pisos;
+    private final Padre propietario;
 
-    public Casa(String zona) {
+    public Casa(String zona, int pisos, Padre propietario) {
         this.zona = zona;
+        this.pisos = pisos;
+        this.propietario = propietario;
     }
 
-    public void setZona(String zona) {
-        this.zona = zona;
-    }
-
-    
     public String getZona() {
         return zona;
+    }
+
+    public int getPisos() {
+        return pisos;
+    }
+    
+    public void setPisos(int pisos){
+        this.pisos=pisos;
     }
 }

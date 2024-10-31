@@ -6,18 +6,24 @@ package javaapplication3;
 
 /**
  *
- * @author xxjos
+ * @author JoseGarces
  */
 public class Celular {
-     private String compañia;
+ private String compañia;
     private String numero;
     private double saldo;
+    private Hijo propietario;
 
     public Celular(String compañia, String numero, double saldo) {
         this.compañia = compañia;
         this.numero = numero;
         this.saldo = saldo;
     }
+
+    public void setPropietario(Hijo propietario) {
+        this.propietario = propietario;
+    }
+
 
     public String getCompañia() {
         return compañia;

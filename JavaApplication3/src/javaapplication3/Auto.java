@@ -6,18 +6,27 @@ package javaapplication3;
 
 /**
  *
- * @author xxjos
+ * @author JoseGarces
  */
 public class Auto {
     private String patente;
     private String modelo;
-    private double combustible;
+    private double combustible = 50.0;
+    private Padre dueno;
 
     public Auto(String patente, String modelo) {
         this.patente = patente;
         this.modelo = modelo;
-        this.combustible = 50.0; // tanque lleno
     }
+
+    public void setDueno(Padre dueno) {
+        this.dueno = dueno;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
 
     public String getPatente() {
         return patente;
@@ -35,8 +44,4 @@ public class Auto {
         this.combustible = combustible;
     }
     
-
-    public String getModelo() {
-        return modelo;
-    }
 }

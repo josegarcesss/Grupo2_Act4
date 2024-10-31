@@ -6,13 +6,9 @@ package javaapplication3;
 
 /**
  *
- * @author xxjos
+ * @author JoseGarces
  */
 public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Auto autoCascajo = new Auto("123LATA", "Renault 12");
         Auto autoFord = new Auto("999POWR", "Ford Focus");
